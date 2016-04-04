@@ -5,8 +5,8 @@ puts "-------------------------------"
 
 # Create an initial Admin User
 admin_username = "errbit"
-admin_email = "errbit@#{Errbit::Config.host}"
-admin_pass  = SecureRandom.urlsafe_base64(12)[0, 12]
+admin_email = "errbit@rotati.com"
+admin_pass  = "password"
 
 puts "Creating an initial admin user:"
 puts "-- username: #{admin_username}" if Errbit::Config.user_has_username
