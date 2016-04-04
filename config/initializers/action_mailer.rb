@@ -7,7 +7,8 @@ if Errbit::Config.email_delivery_method == :smtp
     authentication: Errbit::Config.smtp_authentication,
     user_name:      Errbit::Config.smtp_user_name,
     password:       Errbit::Config.smtp_password,
-    domain:         Errbit::Config.smtp_domain
+    domain:         Errbit::Config.smtp_domain,
+    enable_starttls_auto: true
   }
 end
 
