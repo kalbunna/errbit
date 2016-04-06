@@ -3,7 +3,8 @@ HoptoadNotifier.configure do |config|
   # to set a dummy API key so that HoptoadNotifier doesn't complain.
   config.api_key = "---------"
 
-  # Don't log error that causes 404 page
+  # Don't log error that causes 404 page\
+  config.ignore << "ActionController::RoutingError"
   config.ignore << "ActiveRecord::RecordNotFound"
   config.ignore << "Mongoid::Errors::DocumentNotFound"
 end
