@@ -4,8 +4,20 @@ HoptoadNotifier.configure do |config|
   config.api_key = "---------"
 
   # Don't log error that causes 404 page\
-  config.ignore << "ActionController::RoutingError"
-  config.ignore << "ActiveRecord::RecordNotFound"
-  config.ignore << "Mongoid::Errors::DocumentNotFound"
+  config.ignore_only = %w{
+    ActiveRecord::RecordNotFound
+    ActionController::RoutingError
+    ActionController::InvalidAuthenticityToken
+    CGI::Session::CookieStore::TamperedWithCookie
+    ActionController::UnknownAction
+    AbstractController::ActionNotFound
+    ActionView::MissingTemplate
+    Timeout::Error
+    Net::HTTPBadResponse
+    WebuiMatcher::InvalidRequestFormat
+    ActionController::UnknownFormat
+    ActivXML::Transport::NotFoundError
+    Mongoid::Errors::DocumentNotFound
+  }
 end
 
