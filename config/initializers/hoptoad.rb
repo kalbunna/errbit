@@ -4,9 +4,7 @@ HoptoadNotifier.configure do |config|
   config.api_key = "---------"
 
   # Don't log error that causes 404 page
-  config.ignore_only= %w{
-    Mongoid::Errors::DocumentNotFound
-    ActiveRecord::RecordNotFound
-  }
-
+  config.ignore << "ActiveRecord::RecordNotFound"
+  config.ignore << "Mongoid::Errors::DocumentNotFound"
 end
+
