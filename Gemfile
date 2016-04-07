@@ -25,6 +25,8 @@ gem 'rack-ssl', require: 'rack/ssl' # force SSL
 gem 'rack-ssl-enforcer', require: false
 gem 'rails_autolink'
 gem 'useragent'
+gem 'oruen_redmine_client', '~> 0.0.1'
+gem 'errbit_redmine_plugin', '~> 0.4.0'
 
 # Please don't update hoptoad_notifier to airbrake.
 # It's for internal use only, and we monkeypatch certain methods
