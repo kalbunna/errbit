@@ -48,6 +48,5 @@ module Errbit
 
     # Configure Devise mailer to use our mailer layout.
     config.to_prepare { Devise::Mailer.layout 'mailer' }
-    config.ignore << "ActionController::RoutingError"
   end
 end
